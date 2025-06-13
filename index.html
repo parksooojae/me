@@ -3,9 +3,11 @@
 
 <head>
   <title>Life</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
   <style>
     body, html {
       margin: 0;
@@ -31,26 +33,29 @@
       will-change: transform;
     }
 
-    .content {
-      position: relative;
+    .corner-text {
+      position: absolute;
+      top: 10px;
+      left: 20px;
       z-index: 2;
-      color: white;
-      text-align: center;
-      padding: 20px;
+      color: rgb(0, 0, 0);
+      text-align: left;
+      font-size: 11px;
     }
 
     h1 {
       font-weight: normal;
     }
+
   </style>
+  
   
 </head>
 
 
 <body>
-  <div class="content">
+  <div class="corner-text">
     <h1>Christopher Park</h1>
   </div>
-  <img src="assets/Opportunity.jpeg" alt="Space image" class="fullscreen-image">
 </body>
 </html>
