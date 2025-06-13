@@ -18,44 +18,98 @@
       font-family: 'Inter', sans-serif;
     }
     
-    .fullscreen-image {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      will-change: transform;
-    }
-
     .corner-text {
       position: absolute;
       top: 10px;
       left: 20px;
-      z-index: 2;
+      z-index: 1;
       color: rgb(0, 0, 0);
       text-align: left;
-      font-size: 11px;
+      font-size: 9px;
+      transition: opacity 0.3s ease;
+    }
+
+    .reveal-text {
+      position: absolute;
+      top: 10px;
+      left: 60px;
+      z-index: 1;
+      color: rgb(0, 0, 0);
+      text-align: left;
+      font-size: 9px;
+      transition: opacity 0.3s ease;
+      opacity: 0;
     }
 
     h1 {
       font-weight: normal;
+      position: relative;
     }
-
   </style>
-  
-  
 </head>
-
 
 <body>
   <div class="corner-text">
     <h1>Christopher Park</h1>
   </div>
+  <div class="reveal-text">
+    <h1>박수제 🇰🇷</h1>
+  </div>
+
+  <script>
+    const cornerText = document.querySelector('.corner-text');
+    const revealText = document.querySelector('.reveal-text');
+    const fadeDistance = 100;
+    const gone = 25;
+    const second = 100; // Time in milliseconds for reveal animation
+    const revealTime = 0.8; // Time in seconds for the reveal transition
+    let revealTimeout = null;
+
+    // Update transition duration for both text elements
+    cornerText.style.transition = `opacity ${revealTime}s ease`;
+    revealText.style.transition = `opacity ${revealTime}s ease`;
+
+    document.addEventListener('mousemove', (e) => {
+      const rect = cornerText.getBoundingClientRect();
+      
+      // Calculate the closest point on the rectangle to the mouse
+      const closestX = Math.max(rect.left, Math.min(e.clientX, rect.right));
+      const closestY = Math.max(rect.top, Math.min(e.clientY, rect.bottom));
+      
+      const distance = Math.sqrt(
+        Math.pow(e.clientX - closestX, 2) + 
+        Math.pow(e.clientY - closestY, 2)
+      );
+
+      if (distance <= gone) {
+        cornerText.style.opacity = '0';
+        // Clear any existing timeout
+        if (revealTimeout) {
+          clearTimeout(revealTimeout);
+        }
+        // Set new timeout for reveal
+        revealTimeout = setTimeout(() => {
+          revealText.style.opacity = '1';
+        }, second);
+      } else if (distance <= fadeDistance) {
+        const opacity = (distance - gone) / (fadeDistance - gone);
+        cornerText.style.opacity = opacity;
+        // Clear timeout and hide reveal text if mouse moves away
+        if (revealTimeout) {
+          clearTimeout(revealTimeout);
+          revealTimeout = null;
+        }
+        revealText.style.opacity = '0';
+      } else {
+        cornerText.style.opacity = '1';
+        // Clear timeout and hide reveal text
+        if (revealTimeout) {
+          clearTimeout(revealTimeout);
+          revealTimeout = null;
+        }
+        revealText.style.opacity = '0';
+      }
+    });
+  </script>
 </body>
 </html>
