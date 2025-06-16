@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Life</title>
+  <title>Chris Park</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,58 @@
       transition: opacity 0.3s ease;
     }
 
+    .opportunity-image {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      width: 300px;
+      height: auto;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.3s ease;
+    }
+
+    .bio-text {
+      position: absolute;
+      top: 70px;
+      left: 340px;
+      width: 400px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgb(0, 0, 0);
+      text-align: left;
+    }
+
+    .bio-text a {
+      color: #0066cc;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .bio-text .quote {
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    .image-credit {
+      position: absolute;
+      top: 374px;
+      left: 20px;
+      font-size: 8px;
+      color: #666;
+      font-style: italic;
+    }
+
+    .divider-line {
+      position: absolute;
+      top: 400px;
+      left: 20px;
+      width: 720px;
+      height: 1px;
+      background-color: #e0e0e0;
+    }
+
     .reveal-text {
       position: absolute;
       top: 10px;
@@ -52,8 +104,20 @@
   <div class="corner-text">
     <h1>Christopher Park</h1>
   </div>
+  <img src="assets/Opportunity.jpeg" alt="Opportunity" class="opportunity-image">
+  <div class="bio-text">
+    Hi, I'm Christopher. I am an undergraduate at UC Berkeley, studying computer science. Currently building tools for <a href="https://www.adobe.com/about-adobe.html" target="_blank">Adobe</a>.<br><br>
+    I'm interested in modeling stochastic processes of the world (the human body, weather, market, poker)<br><br>
+    I live in Berkeley, where I spend my free time reading, swimming, and running the beautiful Fire Trail.<br><br>
+    .<br>
+    .<br>
+    .<br><br>
+    <span class="quote">"For those we'll never meet."</span>
+  </div>
+  <div class="image-credit">NASA/JPL-Caltech/Cornell University</div>
+  <div class="divider-line"></div>
   <div class="reveal-text">
-    <h1>박수제 🇰🇷</h1>
+    <h1>박수제</h1>
   </div>
 
   <script>
