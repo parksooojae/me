@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
 import Photos from './pages/Photos';
 import Bookshelf from './pages/Bookshelf';
@@ -29,7 +29,7 @@ const Home = () => {
           About Me
         </div>
         
-        <img src="/me2.jpg" alt="Me" className="opportunity-image" />
+        <img src={`${process.env.PUBLIC_URL}/me2.jpg`} alt="Me" className="opportunity-image" />
         
         <div className="bio-text">
           Hi, I'm Christopher! I study computer science at UC Berkeley. I'm currently building tools for{' '}
@@ -52,27 +52,27 @@ const Home = () => {
       <div className="divider-line"></div>
       
       <div className="links">
-        <a href="/musings">💭 musings</a>
-        <a href="/photos">🎞️ photos</a>
-        <a href="/bookshelf">📚 bookshelf</a>
+        <Link to="/musings">💭 musings</Link>
+        <Link to="/photos">🎞️ photos</Link>
+        <Link to="/bookshelf">📚 bookshelf</Link>
       </div>
     </div>
   );
 };
 
-// Sub-pages are now imported as separate components
-
-// Main App Component
+// Main App Component with error boundary
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/musings" element={<Musings />} />
-          <Route path="/photos" element={<Photos />} />
-          <Route path="/bookshelf" element={<Bookshelf />} />
-        </Routes>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/musings" element={<Musings />} />
+            <Route path="/photos" element={<Photos />} />
+            <Route path="/bookshelf" element={<Bookshelf />} />
+          </Routes>
+        </React.Suspense>
       </div>
     </Router>
   );
