@@ -29,7 +29,7 @@ const Home = () => {
           About Me
         </div>
         
-        <img src={`${process.env.PUBLIC_URL}/me2.jpg`} alt="Me" className="opportunity-image" />
+        <img src={`${process.env.PUBLIC_URL}/back.png`} alt="Me" className="opportunity-image" />
         
         <div className="bio-text">
           Hi, I'm Christopher! I study computer science at UC Berkeley. I'm currently building tools for{' '}
