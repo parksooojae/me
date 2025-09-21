@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
 import Photos from './pages/Photos';
 import Bookshelf from './pages/Bookshelf';
@@ -29,23 +29,25 @@ const Home = () => {
           About Me
         </div>
         
-        <img src={`${process.env.PUBLIC_URL}/back.png`} alt="Me" className="opportunity-image" />
-        
-        <div className="bio-text">
-          Hi, I'm Christopher! I study computer science at UC Berkeley. I'm currently building tools for{' '}
-          <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer">Adobe</a>.<br /><br />
+        <div className="content-wrapper">
+          <img src={`${process.env.PUBLIC_URL}/me.jpeg`} alt="Me" className="opportunity-image" />
           
-          I live in Berkeley, where I spend my free time practicing kendo, swimming, and running the beautiful Fire Trail.<br /><br />
-          
-          Things that interest me:<br />
-          • Stochastic processes of the world (the human body, weather, market, poker)<br />
-          • Game Theory<br />
-          • AI interpretability<br />
-          • Embodied AI<br /><br />
-          .<br />
-          .<br />
-          .<br /><br />
-          <span className="quote">"For those we'll never meet"</span>
+          <div className="bio-text">
+            Hi, I'm Christopher! I study computer science at UC Berkeley. I'm currently building tools for{' '}
+            <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer">Adobe</a>.<br /><br />
+            
+            I live in Berkeley, where I spend my free time practicing kendo, swimming, and running the beautiful Fire Trail.<br /><br />
+            
+            Things that interest me:<br />
+            • Stochastic processes of the world (the human body, weather, market, poker)<br />
+            • Game Theory<br />
+            • AI interpretability<br />
+            • Embodied AI<br /><br />
+            .<br />
+            .<br />
+            .<br /><br />
+            <span className="quote">"For those we'll never meet"</span>
+          </div>
         </div>
       </div>
       

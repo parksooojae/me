@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
 import { Renderer, Program, Mesh, Triangle } from "ogl";
 
-import './LiquidChrome.css';
-
 export const LiquidChrome = ({
   baseColor = [0.1, 0.1, 0.1],
   speed = 0.05,
@@ -48,7 +46,6 @@ export const LiquidChrome = ({
       uniform vec2 uMouse;
       varying vec2 vUv;
 
-      // Noise functions for randomization
       float random(vec2 st) {
           return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
       }
@@ -84,32 +81,26 @@ export const LiquidChrome = ({
           vec2 uv = (2.0 * vUv - 1.0) * vec2(uResolution.x / uResolution.y, 1.0);
           vec2 originalUv = uv;
 
-          // Add time-based noise for evolving patterns (slower)
           float timeNoise = uTime * 0.03;
           vec2 noiseOffset = vec2(timeNoise, timeNoise * 0.7);
 
-          // Create multiple layers of distortion with subtle noise
           for (float i = 1.0; i < 8.0; i++){
               float noiseScale = 0.8 + i * 0.2;
               float noiseX = fbm((uv + noiseOffset) * noiseScale);
               float noiseY = fbm((uv + noiseOffset + vec2(100.0, 50.0)) * noiseScale);
               
-              // Mix traditional waves with noise for organic movement
               float waveX = cos(i * uFrequencyX * uv.y + uTime + uMouse.x * 3.14159);
               float waveY = cos(i * uFrequencyY * uv.x + uTime + uMouse.y * 3.14159);
               
-              // Much less noise blend for smoother look
-              float blendFactor = 0.15; // Much less noise
+              float blendFactor = 0.15;
               uv.x += (uAmplitude / i) * mix(waveX, (noiseX - 0.5) * 2.0, blendFactor);
               uv.y += (uAmplitude / i) * mix(waveY, (noiseY - 0.5) * 2.0, blendFactor);
               
-              // Very subtle rotational noise
               float angle = fbm(uv * 0.5 + timeNoise) * 0.5;
               mat2 rotation = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
-              uv = rotation * uv * 0.995 + uv * 0.005; // Much more subtle rotation
+              uv = rotation * uv * 0.995 + uv * 0.005;
           }
 
-          // Interactive mouse ripple effect with minimal noise
           vec2 diff = (vUv - uMouse);
           float dist = length(diff);
           float falloff = exp(-dist * 15.0);
@@ -117,13 +108,8 @@ export const LiquidChrome = ({
           float ripple = sin(8.0 * dist - uTime * 3.0 + rippleNoise) * 0.02;
           uv += (diff / (dist + 0.001)) * ripple * falloff;
 
-          // Smoother color calculation - black and white only
           vec3 basePattern = uBaseColor / abs(sin(uTime - uv.y - uv.x));
-          
-          // No color variations - keep it black and white
           vec3 color = basePattern;
-          
-          // Add some smoothing to prevent harsh edges
           color = smoothstep(0.0, 1.0, color);
           
           gl_FragColor = vec4(color, 1.0);

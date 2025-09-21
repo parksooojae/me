@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Pages.css';
 
 const Photos = () => {
   return (
     <div className="page-container">
       <div className="page-header">
         <Link to="/" className="back-link">← Back to home</Link>
-        <h1>🎞️ Photos</h1>
+        <h1>photos</h1>
       </div>
       
       <div className="page-content">
