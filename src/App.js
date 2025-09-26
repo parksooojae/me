@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
 import Photos from './pages/Photos';
 import Bookshelf from './pages/Bookshelf';
@@ -29,32 +29,44 @@ const Home = () => {
           About Me
         </div>
         
-        <img src={`${process.env.PUBLIC_URL}/back.png`} alt="Me" className="opportunity-image" />
-        
-        <div className="bio-text">
-          Hi, I'm Christopher! I study computer science at UC Berkeley. I'm currently building tools for{' '}
-          <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer">Adobe</a>.<br /><br />
-          
-          I live in Berkeley, where I spend my free time practicing kendo, swimming, and running the beautiful Fire Trail.<br /><br />
-          
-          Things that interest me:<br />
-          • Stochastic processes of the world (the human body, weather, market, poker)<br />
-          • Game Theory<br />
-          • AI interpretability<br />
-          • Embodied AI<br /><br />
-          .<br />
-          .<br />
-          .<br /><br />
-          <span className="quote">"For those we'll never meet"</span>
+        <div className="content-wrapper">
+          <div className="bio-text">
+            Hi, I'm Chris!
+            <br /><br />
+            
+            I study CS at UC Berkeley, where I spend my free time practicing kendo,<br />
+            swimming, or making music.
+            <br /><br />
+            
+            I built tools for {' '}
+            <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer" className="adobe-link">Adobe</a>
+            {' '} over the summer.
+            <br /><br />
+
+            
+            A few of many things that interest me:<br />
+            • Stochastic processes of the world (the human body, weather, market, poker)<br />
+            • Game Theory<br />
+            • AI interpretability<br />
+            • AI embodiment<br /><br />
+
+            <div className="section-divider"></div>
+
+            <div className="navigation-links">
+              <Link to="/musings">{"> musings"}</Link>
+              <Link to="/photos">{"> photos"}</Link>
+              <Link to="/bookshelf">{"> bookshelf"}</Link>
+            </div>
+
+            <div className="section-divider"></div>
+
+            <div className="social-links">
+              <a href="https://www.instagram.com/parksooojae/" target="_blank" rel="noopener noreferrer">@Instagram</a>
+              <a href="https://www.linkedin.com/in/soojae/" target="_blank" rel="noopener noreferrer">@LinkedIn</a>
+            </div>
+
+          </div>
         </div>
-      </div>
-      
-      <div className="divider-line"></div>
-      
-      <div className="links">
-        <Link to="/musings">💭 musings</Link>
-        <Link to="/photos">🎞️ photos</Link>
-        <Link to="/bookshelf">📚 bookshelf</Link>
       </div>
     </div>
   );
