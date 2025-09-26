@@ -203,16 +203,17 @@ html, body {
 }
 
 .back-link {
-  color: #cc0000;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  color: #000;
   text-decoration: underline;
-  font-size: 0.875rem;
   display: block;
   margin-bottom: 1.25rem;
   transition: color 0.2s ease;
 }
 
 .back-link:hover {
-  color: #990000;
+  color: #cc0000;
 }
 
 .page-container h1 {

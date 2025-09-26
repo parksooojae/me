@@ -10,11 +10,27 @@ const Bookshelf = () => {
       </div>
       
       <div className="page-content">
-        <p>Books that have shaped my thinking and understanding of the world.</p>
-        <p>From technical texts to philosophical works, fiction to biographies.</p>
-        
-        <div className="coming-soon">
-          <em>Reading list coming soon...</em>
+        <div className="bio-text">
+          Books that have shaped my thinking and understanding of the world.<br />
+          <br /><br />
+          
+          • The Brief Wondrous Life of Oscar Wao<br />
+          • Never Let Me Go<br />
+          • Sing, Unburied, Sing<br />
+          • Flowers for Algernon<br />
+          • Greek Lessons<br />
+          • Human Acts<br />
+          • L'ultime secret by Bernard Werber<br />
+          • The Catcher in the Rye<br />
+          • I Am a Strange Loop<br />
+          • Gödel, Escher, Bach<br />
+          • The Little Prince<br />
+          • Momo. Novel by Michael Ende<br />
+          • 전갈아이<br />
+          • The House of Scorpion<br />
+          • "Skellig" by David Almond<br />
+          • The Wizard's Bakery by Gu Byeong-mo<br />
+          • 앉아있는 악마
         </div>
       </div>
     </div>

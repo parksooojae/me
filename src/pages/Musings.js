@@ -10,9 +10,7 @@ const Musings = () => {
       </div>
       
       <div className="page-content">
-        <p>Welcome to my collection of thoughts and reflections.</p>
-        <p>This space is where I share ideas about technology, life, and the fascinating intersections between them.</p>
-        
+
         <div className="coming-soon">
           <em>Content coming soon...</em>
         </div>

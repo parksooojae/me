@@ -10,8 +10,6 @@ const Photos = () => {
       </div>
       
       <div className="page-content">
-        <p>A visual journey through places I've been and moments I've captured.</p>
-        <p>From the trails of Berkeley to everyday beauty around me.</p>
         
         <div className="coming-soon">
           <em>Gallery coming soon...</em>
