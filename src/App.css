@@ -1,18 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #000;
+  background-color: #FFFEFD;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100%;
 }
 
 .App {
   min-height: 100vh;
   width: 100%;
+  background-color: #FFFEFD;
+  overflow-y: auto;
 }
 
 /* Home Page Styles */
@@ -20,15 +29,19 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 1rem;
+  padding: 0;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .corner-text {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
   color: #000;
   text-align: left;
-  margin-bottom: 2rem;
 }
 
 .corner-text h1 {
@@ -39,9 +52,9 @@ body {
 
 .liquid-chrome-wrapper {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 20rem;
-  margin-bottom: 2rem;
+  margin: 0;
   z-index: 0;
 }
 
@@ -62,31 +75,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 0 1rem;
+  margin: 2rem 0 0 1rem;
 }
 
 .about-me-text {
+  font-family: 'IBM Plex Serif', serif;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   color: #000;
   text-align: left;
 }
 
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: block;
 }
 
-.opportunity-image {
-  width: 100%;
-  max-width: 18.75rem;
-  height: auto;
-  border-radius: 0.2rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease;
-}
 
 .bio-text {
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   line-height: 1.6;
   color: #000;
   text-align: left;
@@ -100,24 +107,73 @@ body {
   text-underline-offset: 0.125rem;
 }
 
+.bio-text a.adobe-link {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 .bio-text .quote {
+  font-family: 'IBM Plex Serif', serif;
   margin-top: 1.25rem;
   font-style: italic;
 }
 
-.divider-line {
-  width: 100%;
-  max-width: 45rem;
+/* Section Dividers */
+.section-divider {
+  width: 60%;
   height: 1px;
-  background-color: #e0e0e0;
-  margin: 2rem 0 1rem 0;
+  border-top: 1px dotted #999;
+  margin: 1.5rem 0;
 }
 
-.links {
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
+/* Social Media Links */
+.social-links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.social-links a {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.125rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #cc0000;
+}
+
+/* Navigation Links */
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navigation-links a {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.125rem;
+  transition: color 0.2s ease;
+}
+
+.navigation-links a:hover {
+  color: #cc0000;
+}
+
+.links {
+  font-family: 'IBM Plex Serif', serif;
+  font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .links a {
@@ -139,6 +195,7 @@ body {
   max-width: 50rem;
   margin: 0 auto;
   min-height: 100vh;
+  padding-bottom: 4rem;
 }
 
 .page-header {
@@ -183,25 +240,11 @@ body {
 }
 
 /* Responsive Design */
-@media (min-width: 48rem) {
-  .content-wrapper {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-  
-  .opportunity-image {
-    flex-shrink: 0;
-  }
-  
-  .bio-text {
-    flex: 1;
-  }
-}
 
 @media (max-width: 30rem) {
-  .home-container {
-    padding: 0.75rem;
+  .corner-text {
+    top: 0.75rem;
+    left: 0.75rem;
   }
   
   .page-container {
@@ -210,5 +253,10 @@ body {
   
   .liquid-chrome-wrapper {
     height: 15rem;
+  }
+  
+  .about-me-section {
+    padding: 0 0.75rem;
+    margin: 2rem 0 0 0.75rem;
   }
 }
