@@ -11,7 +11,7 @@ const Bookshelf = () => {
       
       <div className="page-content">
         <div className="bio-text">
-          Books that have shaped my thinking and understanding of the world.<br />
+          Texts that changed my brain chemistry.<br />
           <br /><br />
           
           • The Brief Wondrous Life of Oscar Wao<br />
@@ -20,17 +20,24 @@ const Bookshelf = () => {
           • Flowers for Algernon<br />
           • Greek Lessons<br />
           • Human Acts<br />
-          • L'ultime secret by Bernard Werber<br />
+          • L'ultime Secret<br />
           • The Catcher in the Rye<br />
           • I Am a Strange Loop<br />
           • Gödel, Escher, Bach<br />
           • The Little Prince<br />
-          • Momo. Novel by Michael Ende<br />
-          • 전갈아이<br />
-          • The House of Scorpion<br />
-          • "Skellig" by David Almond<br />
-          • The Wizard's Bakery by Gu Byeong-mo<br />
-          • 앉아있는 악마
+          • Momo (by Michael Ende)<br />
+          • The House of the Scorpion<br />
+          • Skellig<br />
+          • The Wizard's Bakery (by Gu Byeong-mo)<br />
+          • 앉아있는 악마 (by Kim Min-Gyung)<br />
+          • I Spy series<br />
+          • Purple Hibiscus<br />
+          • The Giving Tree<br />
+          • The Dictionary of Lost Words<br />
+          • TIME100 (April 2013)<br />
+          • The Korean-English Historical Terminology Collection (written by my grandfather)<br />
+
+
         </div>
       </div>
     </div>
