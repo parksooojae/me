@@ -63,6 +63,7 @@ const Home = () => {
             <div className="social-links">
               <a href="https://www.instagram.com/parksooojae/" target="_blank" rel="noopener noreferrer">@Instagram</a>
               <a href="https://www.linkedin.com/in/soojae/" target="_blank" rel="noopener noreferrer">@LinkedIn</a>
+              <a href="mailto:chris.park@berkeley.edu">@Email</a>
             </div>
 
           </div>
