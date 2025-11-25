@@ -47,7 +47,7 @@ const Home = () => {
 
             • Speech-language models. Language is mankind's greatest invention, and speech is the vessel.<br />
             • Modeling stochasticity (the human body, weather, market, poker)<br />
-            • Model interprebility<br />
+            • Model interpretability<br />
             • Stoicism & existentialism<br />
             • Game Theory<br />
 
