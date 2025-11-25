@@ -18,8 +18,8 @@ const Home = () => {
       <div className="liquid-chrome-wrapper">
         <LiquidChrome
           baseColor={[0.45, 0.45, 0.45]}
-          speed={0.1}
-          amplitude={0.5}
+          speed={0.2}
+          amplitude={0.3}
           interactive={false}
         />
       </div>
@@ -34,8 +34,7 @@ const Home = () => {
             Hi, I'm Chris!
             <br /><br />
             
-            I study CS at UC Berkeley, where I spend my free time practicing kendo,<br />
-            swimming, or making music.
+            I study CS at UC Berkeley, where I spend my free time practicing kendo, swimming, or making music.
             <br /><br />
             
             I built tools for {' '}
@@ -44,11 +43,13 @@ const Home = () => {
             <br /><br />
 
             
-            A few of many things that interest me:<br />
-            • Stochastic processes of the world (the human body, weather, market, poker)<br />
+            <strong>A few of many things that interest me:</strong><br />
+
+            • Speech-language models. Language is mankind's greatest invention, and speech is the vessel.<br />
+            • Modeling stochasticity (the human body, weather, market, poker)<br />
+            • Model interprebility<br />
+            • Stoicism & existentialism<br />
             • Game Theory<br />
-            • AI interpretability<br />
-            • AI embodiment<br /><br />
 
             <div className="section-divider"></div>
 
