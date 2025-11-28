@@ -34,7 +34,7 @@ const Home = () => {
             Hi, I'm Chris!
             <br /><br />
             
-            I study CS at UC Berkeley, where I spend my free time practicing kendo, swimming, or making music.
+            I study CS at UC Berkeley. I swim long distances, read lots of books, and make music.
             <br /><br />
             
             I built tools for {' '}
@@ -43,11 +43,10 @@ const Home = () => {
             <br /><br />
 
             
-            <strong>A few of many things that interest me:</strong><br />
+            <strong>Talk to me about:</strong><br />
 
-            • Speech-language models. Language is mankind's greatest invention, and speech is the vessel.<br />
+            • Speech ∪ language models<br />
             • Modeling stochasticity (the human body, weather, market, poker)<br />
-            • Model interpretability<br />
             • Stoicism & existentialism<br />
             • Game Theory<br />
 
