@@ -10,10 +10,11 @@ const Musings = () => {
       </div>
       
       <div className="page-content">
-
-        <div className="coming-soon">
-          <em>Content coming soon...</em>
-        </div>
+        <ul>
+          <li>
+            "ruthlessness" is born either of great compassion and love, or of a complete lack thereof.
+          </li>
+        </ul>
       </div>
     </div>
   );

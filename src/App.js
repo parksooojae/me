@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
-import Photos from './pages/Photos';
 import Bookshelf from './pages/Bookshelf';
 import LiquidChrome from './LiquidChrome';
 import './App.css';
@@ -54,7 +53,6 @@ const Home = () => {
 
             <div className="navigation-links">
               <Link to="/musings">{"> musings"}</Link>
-              <Link to="/photos">{"> photos"}</Link>
               <Link to="/bookshelf">{"> bookshelf"}</Link>
             </div>
 
@@ -82,7 +80,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/musings" element={<Musings />} />
-            <Route path="/photos" element={<Photos />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
           </Routes>
         </React.Suspense>
