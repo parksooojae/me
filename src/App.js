@@ -2,32 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
 import Bookshelf from './pages/Bookshelf';
-import LiquidChrome from './LiquidChrome';
 import './App.css';
 
 // Main Home Component
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="corner-text">
-        <h1 style={{ fontSize: '40px' }}>Christopher Park</h1>
+      <div className="hero-name">
+        <h1>Christopher Park</h1>
       </div>
-      
-      {/* LiquidChrome component positioned under the name */}
-      <div className="liquid-chrome-wrapper">
-        <LiquidChrome
-          baseColor={[0.45, 0.45, 0.45]}
-          speed={0.2}
-          amplitude={0.3}
-          interactive={false}
-        />
-      </div>
-      
+
       <div className="about-me-section">
-        <div className="about-me-text">
-          About Me
-        </div>
-        
         <div className="content-wrapper">
           <div className="bio-text">
             Hi, I'm Chris!
@@ -59,9 +44,7 @@ const Home = () => {
             <div className="section-divider"></div>
 
             <div className="social-links">
-              <a href="https://www.instagram.com/parksooojae/" target="_blank" rel="noopener noreferrer">@Instagram</a>
-              <a href="https://www.linkedin.com/in/soojae/" target="_blank" rel="noopener noreferrer">@LinkedIn</a>
-              <a href="mailto:chris.park@berkeley.edu">@Email</a>
+              <span>chris dot park at berkeley dot edu</span>
             </div>
 
           </div>
