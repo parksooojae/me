@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +5,7 @@
 }
 
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #000;
   background-color: #FFFEFD;
@@ -29,18 +27,25 @@ html, body {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 0;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 2rem;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .hero-name {
-  max-width: 50rem;
-  margin: 0 0 0 1rem;
-  padding: 1rem 1rem 0;
+  margin: 0;
+  padding: 3rem 0 0;
   color: #000;
   text-align: left;
+}
+
+.hero-email {
+  display: block;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  color: #999;
 }
 
 .hero-name h1 {
@@ -51,12 +56,11 @@ html, body {
 
 .about-me-section {
   position: relative;
-  max-width: 50rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 1rem;
-  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
 }
 
 .content-wrapper {
@@ -65,7 +69,7 @@ html, body {
 
 
 .bio-text {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   line-height: 1.6;
   color: #000;
@@ -81,11 +85,27 @@ html, body {
 }
 
 .bio-text a.adobe-link {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.bio-text a.adobe-link:hover {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+.bio-text a.amazon-link {
+  color: #FF9900;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.bio-text a.amazon-link:hover {
+  background-color: #FF9900;
+  color: #fff;
 }
 
 .bio-text .quote {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   margin-top: 1.25rem;
   font-style: italic;
 }
@@ -106,7 +126,7 @@ html, body {
 }
 
 .social-links a {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   color: #000;
   text-decoration: underline;
@@ -120,7 +140,7 @@ html, body {
 }
 
 .social-links span {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   color: #000;
 }
@@ -133,7 +153,7 @@ html, body {
 }
 
 .navigation-links a {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   color: #000;
   text-decoration: underline;
@@ -147,7 +167,7 @@ html, body {
 }
 
 .links {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   display: flex;
   flex-direction: column;
@@ -182,7 +202,7 @@ html, body {
 }
 
 .back-link {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: Arial, sans-serif;
   font-size: clamp(0.65rem, 1.8vw, 0.75rem);
   color: #000;
   text-decoration: underline;
@@ -219,20 +239,58 @@ html, body {
   color: #666;
 }
 
+/* Polaroid hover image */
+.food-hover-trigger {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 0.2rem;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.polaroid {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 0;
+  background: #fff;
+  padding: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.polaroid-visible {
+  opacity: 1;
+}
+
+.polaroid img {
+  display: block;
+  width: 14rem;
+  height: auto;
+}
+
+.polaroid-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.8rem;
+  color: #333;
+  min-height: 2rem;
+  margin-top: 0.5rem;
+}
+
 /* Responsive Design */
 
 @media (max-width: 30rem) {
-  .hero-name {
-    margin-left: 0.75rem;
-    padding: 0.75rem 0.75rem 0;
+  .home-container {
+    padding: 0 1rem;
   }
 
   .page-container {
     padding: 1rem;
-  }
-
-  .about-me-section {
-    padding: 0 0.75rem;
-    margin: 0.5rem 0 0 0.75rem;
   }
 }

@@ -1,38 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Musings from './pages/Musings';
 import Bookshelf from './pages/Bookshelf';
+import foodImg from './assets/food.png';
 import './App.css';
 
 // Main Home Component
 const Home = () => {
+  const [showFood, setShowFood] = useState(false);
+
   return (
     <div className="home-container">
       <div className="hero-name">
-        <h1>Christopher Park</h1>
+        <h3>Christopher Park</h3>
+        <span className="hero-email">[chris dot park at berkeley dot edu]</span>
       </div>
 
       <div className="about-me-section">
         <div className="content-wrapper">
           <div className="bio-text">
+            <br />
             Hi, I'm Chris!
             <br /><br />
             
-            I study CS at UC Berkeley. I swim long distances, read lots of books, and make music.
+            I'm a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
+            <br />
+            I am particularly interested in maximizing efficiency and capabilities of language models. 
+            <br />
+            I believe it not principled to be wasteful at extremely large scales. 
             <br /><br />
             
-            I built tools for {' '}
+            Over the summer, I built tools for {' '}
             <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer" className="adobe-link">Adobe</a>
-            {' '} over the summer.
+            {''}. I wrote algos for <a href="https://business.amazon.com/" target="_blank" rel="noopener noreferrer" className="amazon-link">Amazon</a>'s recommendation engine first semester in college.
             <br /><br />
+            I create {' '}
+            <span
+              className="food-hover-trigger"
+              onMouseEnter={() => setShowFood(true)}
+              onMouseLeave={() => setShowFood(false)}
+            >
+              tasting menus
+              <span className={`polaroid ${showFood ? 'polaroid-visible' : ''}`}>
+                <img src={foodImg} alt="Peach, Pesto & Burrata Sandwich" />
+                <span className="polaroid-caption">Peach, Pesto &amp; Burrata Sandwich</span>
+              </span>
+            </span>
+            {' '} for friends and close acquaintances. <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Reach out if you are interested</a>!
+
+            <br /><br /><br /><br />
 
             
-            <strong>Talk to me about:</strong><br />
+            <strong>Yap with me about:</strong><br />
 
-            • Speech ∪ language models<br />
-            • Modeling stochasticity (the human body, weather, market, poker)<br />
+            • Language Models<br />
             • Stoicism & existentialism<br />
-            • Game Theory<br />
+            • Game Theory<br /><br />
+
+
 
             <div className="section-divider"></div>
 
@@ -43,9 +68,6 @@ const Home = () => {
 
             <div className="section-divider"></div>
 
-            <div className="social-links">
-              <span>chris dot park at berkeley dot edu</span>
-            </div>
 
           </div>
         </div>
