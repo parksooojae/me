@@ -32,7 +32,8 @@ const Home = () => {
             
             Over the summer, I built tools for {' '}
             <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer" className="adobe-link">Adobe</a>
-            {''}. I wrote algos for <a href="https://business.amazon.com/" target="_blank" rel="noopener noreferrer" className="amazon-link">Amazon</a>'s recommendation engine first semester in college.
+            {''}. <br />
+            First semester of college, I wrote algos for <a href="https://business.amazon.com/" target="_blank" rel="noopener noreferrer" className="amazon-link">Amazon</a>'s recommendation engine.
             <br /><br />
             I create {' '}
             <span
