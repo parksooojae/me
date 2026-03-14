@@ -55,6 +55,7 @@ const Home = () => {
             • Language Models<br />
             • Stoicism & existentialism<br />
             • Game Theory<br /><br />
+            • Best restaurants in Busan + Seoul, KR 🇰🇷<br /><br />
 
 
 
