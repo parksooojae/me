@@ -27,8 +27,6 @@ const Home = () => {
             <br />
             I am particularly interested in maximizing the efficiency and capabilities of language models. 
             <br />
-            Scaling compute is seductive. Efficiency is principled.
-            <br /><br />
             
             Over the summer, I built tools for {' '}
             <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer" className="adobe-link">Adobe</a>
