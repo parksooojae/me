@@ -25,9 +25,9 @@ const Home = () => {
             
             I'm a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
             <br />
-            I am particularly interested in maximizing efficiency and capabilities of language models. 
+            I am particularly interested in maximizing the efficiency and capabilities of language models. 
             <br />
-            I believe it not principled to be wasteful at extremely large scales. 
+            Scaling compute is seductive. Efficiency is principled.
             <br /><br />
             
             Over the summer, I built tools for {' '}
