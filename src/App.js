@@ -28,11 +28,10 @@ const Home = () => {
             I am particularly interested in maximizing the efficiency and capabilities of language models. 
             <br />
             Currently, I'm conducting research on flow matching for audio generation at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Berkeley NLP Group</a>.
-            <br /><br /> Over the summer, I built tools for {' '}
-            <a href="https://www.adobe.com/about-adobe.html" target="_blank" rel="noopener noreferrer" className="adobe-link">Adobe</a>
-            {''}. <br /> In the previous semester, I wrote algos for <a href="https://business.amazon.com/" target="_blank" rel="noopener noreferrer" className="amazon-link">Amazon</a>'s recommendation engine.
-            <br /><br />
-            ⭐ I create {' '}
+
+
+            <br />
+            I create {' '}
             <span
               className="food-hover-trigger"
               onMouseEnter={() => setShowFood(true)}
@@ -44,7 +43,7 @@ const Home = () => {
                 <span className="polaroid-caption">Peach, Pesto &amp; Burrata Sandwich</span>
               </span>
             </span>
-            {' '} for friends and close acquaintances. <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Reach out if you are interested</a>! ⭐
+            {' '} for friends and close acquaintances. <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Reach out if you are interested</a>!
 
             <br /><br /><br /><br />
 
