@@ -25,7 +25,7 @@ const Home = () => {
             
             I'm a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
             <br />
-            I am particularly interested in improving the capabilities of language models. 
+            I focus on work in improving the efficiency and capabilities of language models. 
             <br />
             Currently, I'm conducting research on flow matching for audio generation at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Berkeley NLP Group</a>.
 
