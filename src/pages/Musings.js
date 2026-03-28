@@ -16,7 +16,7 @@ const Musings = () => {
             "Ruthlessness" is born either of great compassion and love, or of a complete lack thereof.
           </li>
           <li>
-            Read slowly and deliberately. Relish the content, savor it, as you would with fine wine. Nobody chugs that shit.
+            Read slowly and deliberately. Relish the content, savor it, as you would with fine wine.
           </li>
         </ul>
       </div>
