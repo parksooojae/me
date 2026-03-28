@@ -16,8 +16,9 @@ const Bookshelf = () => {
           <span style={{color: '#cc0000', fontSize: '0.9em'}}>* Reading</span><br />
           <span style={{color: '#1b7001', fontSize: '0.9em'}}>† Reread</span><br />
           <br />
-          
-          • My Brilliant Friend by  Elena Ferrante <span style={{color: '#cc0000'}}>*</span><br />
+          • Little Book of Deep Learning <span style={{color: '#cc0000'}}>*</span><br />
+          • Man's Search for Meaning <span style={{color: '#cc0000'}}>*</span><br />
+          • My Brilliant Friendo<br />
           • The Brief Wondrous Life of Oscar Wao<br />
           • Never Let Me Go<br />
           • Sing, Unburied, Sing<br />
