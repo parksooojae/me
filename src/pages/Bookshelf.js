@@ -11,14 +11,21 @@ const Bookshelf = () => {
       
       <div className="page-content">
         <div className="bio-text">
-          Texts that changed my brain chemistry.<br />
           <br />
+          Notable reads from 2006-2026<br /><br /><br />
           <span style={{color: '#cc0000', fontSize: '0.9em'}}>* Reading</span><br />
           <span style={{color: '#1b7001', fontSize: '0.9em'}}>† Reread</span><br />
+          <span style={{color: 'grey', fontSize: '0.9em'}}>^ On pause</span><br />
+     
+
           <br />
-          • Little Book of Deep Learning <span style={{color: '#cc0000'}}>*</span><br />
-          • Man's Search for Meaning <span style={{color: '#cc0000'}}>*</span><br />
-          • My Brilliant Friendo<br />
+          • Information Theory, Inference and Learning Algorithms <span style={{color: '#cc0000'}}>*</span><br />
+     
+          • Meditations <span style={{color: '#cc0000'}}>*</span><br />
+          • Little Book of Deep Learning  <span style={{color: '#cc0000'}}>*</span><br />
+          • Man's Search for Meaning <span style={{color: 'grey'}}>^</span><br />
+     
+          • My Brilliant Friend<br />
           • The Brief Wondrous Life of Oscar Wao<br />
           • Never Let Me Go<br />
           • Sing, Unburied, Sing<br />

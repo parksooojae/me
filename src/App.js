@@ -20,41 +20,21 @@ const Home = () => {
         <div className="content-wrapper">
           <div className="bio-text">
             <br />
-            Hi, I'm Chris!
-            <br /><br />
+            <br />
             
-            I'm a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
+            I am a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
             <br />
-            I focus on work in improving the efficiency and capabilities of language models. 
+            I am interested in improving the efficiency and capabilities of large reasoning models. 
             <br />
-            Currently, I'm conducting research on flow matching for audio generation at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Berkeley NLP Group</a>.
+            I am conducting research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
 
-
             <br />
-            I create {' '}
-            <span
-              className="food-hover-trigger"
-              onMouseEnter={() => setShowFood(true)}
-              onMouseLeave={() => setShowFood(false)}
-            >
-              tasting menus
-              <span className={`polaroid ${showFood ? 'polaroid-visible' : ''}`}>
-                <img src={foodImg} alt="Peach, Pesto & Burrata Sandwich" />
-                <span className="polaroid-caption">Peach, Pesto &amp; Burrata Sandwich</span>
-              </span>
-            </span>
-            {' '} for friends and close acquaintances. <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Reach out if you are interested</a>!
+            <br />
+             <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Book a spot at my restauraunt</a>.
 
             <br /><br /><br /><br />
 
-            
-            <strong>Yap with me about:</strong><br />
-
-            • Language Models<br />
-            • Stoicism & existentialism<br />
-            • Game Theory<br />
-            • Best eats in Busan + Seoul, KR 🇰🇷<br /><br />
-
+          
 
 
             <div className="section-divider"></div>
