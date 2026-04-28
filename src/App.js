@@ -24,9 +24,9 @@ const Home = () => {
             
             I am a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
             <br />
-            I am interested in improving the efficiency and capabilities of large reasoning models. 
+            My broad interests in ML and mathematics point to improving the efficiency and capabilities of large reasoning models. 
             <br />
-            I am conducting research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
+            Currently, I spend time conducting research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
 
             <br />
             <br />
