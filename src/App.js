@@ -30,7 +30,11 @@ const Home = () => {
 
             <br />
             <br />
-             <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Book a spot at my restauraunt</a>.
+             <span>
+               <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Book a spot at my restauraunt</a>
+               <span style={{ fontSize: '0.65em', color: '#aaa', marginLeft: '4px' }}>(for legal reasons this is satire)</span>
+             </span>
+        
 
             <br /><br /><br /><br />
 
