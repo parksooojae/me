@@ -26,7 +26,7 @@ const Home = () => {
             <br />
             My broad interests in ML and mathematics point to improving the efficiency and capabilities of large reasoning models. 
             <br />
-            Currently, I spend time conducting research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
+            I conduct research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
 
             <br />
             <br />
