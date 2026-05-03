@@ -18,16 +18,13 @@ const Musings = () => {
             Read slowly and deliberately.
           </li>
           <li>
-            I’ve begun to dedicate more time to research and academics. 
-            <br />
-       
-            In doing so, I discovered myself with a growing dread that the field of knowledge is:
+            I feel growing sense of "dread" that a field of knowledge is:
             <div style={{ marginLeft: '2em' }}>
-              (1) incredibly vast and deep<br />
+              (1) incredibly vast and deep, relative to my own comprehension of things<br />
               (2) expanding faster than I can perceive.
             </div>
             Dunning–Kruger effect.
-            It scares me more that this realization never struck me until now. I’m very humbled.
+            It scares me more that this realization never struck me until now.
           </li>
         </ul>
        
