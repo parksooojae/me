@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Musings from './pages/Musings';
 import Bookshelf from './pages/Bookshelf';
 import foodImg from './assets/food.png';
 import './App.css';
@@ -30,12 +29,7 @@ const Home = () => {
 
             <br />
             <br />
-             <span>
-               <a href="https://warring.st/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Book a spot at my restauraunt</a>
-               <span style={{ fontSize: '0.65em', color: '#aaa', marginLeft: '4px' }}>(for legal reasons this is satire)</span>
-             </span>
         
-
             <br /><br /><br /><br />
 
           
@@ -44,7 +38,6 @@ const Home = () => {
             <div className="section-divider"></div>
 
             <div className="navigation-links">
-              <Link to="/musings">{"> musings"}</Link>
               <Link to="/bookshelf">{"> bookshelf"}</Link>
             </div>
 
@@ -66,7 +59,6 @@ const App = () => {
         <React.Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/musings" element={<Musings />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
           </Routes>
         </React.Suspense>
