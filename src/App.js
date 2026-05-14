@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Bookshelf from './pages/Bookshelf';
 import foodImg from './assets/food.png';
+import avatarImg from './assets/avatar.png';
 import './App.css';
 
 // Main Home Component
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="hero-name">
+        <img src={avatarImg} alt="" className="hero-avatar" />
         <h3>Christopher Park</h3>
         <span className="hero-email">[chris dot park at berkeley dot edu]</span>
       </div>
@@ -18,20 +20,12 @@ const Home = () => {
       <div className="about-me-section">
         <div className="content-wrapper">
           <div className="bio-text">
-            <br />
-            <br />
-            
-            I am a 2nd year undergraduate studying CS (+ quantum computing) at UC Berkeley.
-            <br />
-            My broad interests in ML and mathematics point to improving the efficiency and capabilities of large reasoning models. 
-            <br />
-            I conduct research at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#1a5490'}}>Natural Language Processing Group </a> @ BAIR.
+            I am an undergraduate student at UC Berkeley. My broad interests<br />
+            in machine learning and mathematics point to improving the efficiency<br />
+            and capabilities of large reasoning models. I am a researcher at the<br /> <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Natural Language Processing Group</a> @ <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>BAIR</a>.
+       
 
-            <br />
-            <br />
-        
-            <br /><br /><br /><br />
-
+            <br /><br />
           
 
 
