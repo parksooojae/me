@@ -20,14 +20,18 @@ const Home = () => {
       <div className="about-me-section">
         <div className="content-wrapper">
           <div className="bio-text">
-            I am an undergraduate student at UC Berkeley. My broad interests<br />
-            in machine learning and mathematics point to improving the efficiency<br />
-            and capabilities of large reasoning models. I am a researcher at the<br /> <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Natural Language Processing Group</a> @ <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>BAIR</a>.
+            Undergraduate researcher at the <a href="https://nlp.cs.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>Natural Language Processing Group</a> @ <a href="https://bair.berkeley.edu/" target="_blank" rel="noopener noreferrer" style={{color: '#000'}}>BAIR</a>.
+       
+       
+       
+            <br /><br />
+
+            Former researcher at <a href="https://medschool.ucsf.edu/research" target="_blank" rel="noopener noreferrer" style={{color: '#000', textDecoration: 'underline', textDecorationThickness: '1px', textUnderlineOffset: '0.125rem'}}>UCSF School of Medicine</a>, on wearable devices.
        
 
             <br /><br />
-          
 
+            In the beginning, a violinist.
 
             <div className="section-divider"></div>
 
